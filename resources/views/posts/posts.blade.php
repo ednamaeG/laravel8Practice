@@ -13,11 +13,10 @@
         @foreach ($posts as $post)
             <div class="card mb-4">
                 <div class="card-header">
-                    <h3>
-                        {{ $post->user->name }}
-                    </h3>
+                    
                     <h4>{{ $post->title }}</h4>
-                    <small>{{ $post->created_at->diffForHumans() }}</small>
+                     
+                    <small>  posted by <strong>{{ $post->user->name }}</strong> ・ {{ $post->created_at->diffForHumans() }}</small>
                 </div>
 
                 <div class="card-body">

@@ -14,22 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-
-
+ 
 Route::get('/', function () {
     return redirect('/posts');
 });
 
- 
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 Auth::routes();
 
 Route::resource('posts','PostsController')->middleware('auth');
+
  
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
